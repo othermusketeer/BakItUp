@@ -6,7 +6,8 @@ namespace BackupProgram
 {
     public class BackupSettings
     {
-        public int IntervalMinutes { get; set; }
+        public const string Comment = "Please use forward slashes instead of backward slashes in file paths. Interval is seconds.";
+        public int IntervalSeconds { get; set; }
         public string BackupFolderPath { get; set; }
         public string OutputFolderPath { get; set; }
         public bool SkipUnmodified { get; set; }
@@ -14,7 +15,8 @@ namespace BackupProgram
         public BackupSettings()
         {
             // Set default values
-            IntervalMinutes = 30;
+            
+            IntervalSeconds = 30;
             BackupFolderPath = "./saves";
             OutputFolderPath = "./save_backups";
             SkipUnmodified = false;
@@ -29,7 +31,7 @@ namespace BackupProgram
         public BackupSettings(string backupFolderPath, int intervalMinutes)
             : this(backupFolderPath)
         {
-            IntervalMinutes = intervalMinutes;
+            IntervalSeconds = intervalMinutes;
         }
 
         public BackupSettings(string backupFolderPath, int intervalMinutes, string outputFolderPath)
@@ -52,10 +54,12 @@ namespace BackupProgram
                 BackupSettings loadedSettings = JsonSerializer.Deserialize<BackupSettings>(json);
 
                 // Update the current instance with the loaded settings
-                IntervalMinutes = loadedSettings.IntervalMinutes;
+                IntervalSeconds = loadedSettings.IntervalSeconds;
                 BackupFolderPath = loadedSettings.BackupFolderPath;
                 OutputFolderPath = loadedSettings.OutputFolderPath;
                 SkipUnmodified = loadedSettings.SkipUnmodified;
+
+                this.SaveToFile(filePath);
 
                 //Console.WriteLine("Settings loaded successfully.");
             }

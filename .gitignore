@@ -3,3 +3,6 @@ settings.json
 BakItUp/bin
 BakItUp/obj
 BakItUp/save_backups
+.vs
+BakItUp/BakItUp.csproj.user
+BakItUp/Properties/PublishProfiles/FolderProfile.pubxml.user

@@ -48,7 +48,8 @@ namespace BackupProgram
             }
 
             // Update status showing loaded settings
-            StatusUpdateCallback?.Invoke("Loaded settings. Interval: " + settings.IntervalMinutes + " minutes, Backup Folder: " + settings.BackupFolderPath + ", Output Folder: " + settings.OutputFolderPath, false);
+           
+            StatusUpdateCallback?.Invoke("Loaded settings. Interval: " + settings.IntervalSeconds + " sec,  Backup Folder: " + settings.BackupFolderPath + ",  Output Folder: " + settings.OutputFolderPath, false);
         }
 
         // Save settings to file
@@ -66,7 +67,7 @@ namespace BackupProgram
         {
             while (BackupFiles())
             {
-                System.Threading.Thread.Sleep(settings.IntervalMinutes * 1000); // 30 minutes delay
+                System.Threading.Thread.Sleep(settings.IntervalSeconds * 1000); // 30 minutes delay
             }
         }
 
@@ -94,7 +95,7 @@ namespace BackupProgram
                 StatusUpdateCallback?.Invoke("Backup started", false);
                 
                 // Artificial delay, to avoid hitting CTRL+C during a save
-                System.Threading.Thread.Sleep(1000);
+                System.Threading.Thread.Sleep(3000);
 
                 pendingError = "Error getting a list of files in the backup folder.";
                 // Create a list of the files in the backup folder
