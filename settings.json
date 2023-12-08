@@ -1,0 +1,7 @@
+{
+  "Comment": "Please use forward slashes instead of backward slashes in file paths. Interval is seconds.",
+  "IntervalSeconds": 30,
+  "BackupFolderPath": "./saves",
+  "OutputFolderPath": "./save_backups",
+  "SkipUnmodified": false
+}
