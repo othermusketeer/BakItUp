@@ -6,7 +6,7 @@ namespace BackupProgram
 {
     public class BackupSettings
     {
-        public const string Comment = "Please use forward slashes instead of backward slashes in file paths. Interval is seconds.";
+        public string Comment { get; set; }
         public int IntervalSeconds { get; set; }
         public string BackupFolderPath { get; set; }
         public string OutputFolderPath { get; set; }
@@ -15,7 +15,8 @@ namespace BackupProgram
         public BackupSettings()
         {
             // Set default values
-            
+
+            Comment = "Please use forward slashes instead of backward slashes in file paths. Interval is seconds.";
             IntervalSeconds = 30;
             BackupFolderPath = "./saves";
             OutputFolderPath = "./save_backups";
