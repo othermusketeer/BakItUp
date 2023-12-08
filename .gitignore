@@ -1,8 +1,8 @@
 .vscode/settings.json
 settings.json
-BakItUp/bin
-BakItUp/obj
-BakItUp/save_backups
+bin
+obj
+save_backups
 .vs
-BakItUp/BakItUp.csproj.user
-BakItUp/Properties/PublishProfiles/FolderProfile.pubxml.user
+BakItUp.csproj.user
+Properties/PublishProfiles/FolderProfile.pubxml.user

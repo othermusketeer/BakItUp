@@ -1,22 +1,25 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.0.31903.59
+VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BakItUp", "BakItUp\BakItUp.csproj", "{7CA99088-0D84-400D-9379-FEC6FE4A6DA8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BakItUp", "BakItUp.csproj", "{E9D32014-A671-435A-ADF3-D05EC6459812}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E9D32014-A671-435A-ADF3-D05EC6459812}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9D32014-A671-435A-ADF3-D05EC6459812}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9D32014-A671-435A-ADF3-D05EC6459812}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9D32014-A671-435A-ADF3-D05EC6459812}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7CA99088-0D84-400D-9379-FEC6FE4A6DA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7CA99088-0D84-400D-9379-FEC6FE4A6DA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7CA99088-0D84-400D-9379-FEC6FE4A6DA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7CA99088-0D84-400D-9379-FEC6FE4A6DA8}.Release|Any CPU.Build.0 = Release|Any CPU
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BBE32FC2-44B6-4EA6-9195-3E3DC6A4CE43}
 	EndGlobalSection
 EndGlobal
